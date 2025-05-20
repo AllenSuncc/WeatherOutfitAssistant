@@ -13,37 +13,37 @@ import kotlinx.coroutines.flow.Flow
 interface OutfitDAO {
 
     /**
-     * 向数据库插入一条穿搭记录
-     * 如果存在相同主键，则替换旧记录（REPLACE 策略）
+     * Insert an outfit record into the database
+     * If a record with the same primary key exists, replace it (REPLACE strategy)
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOutfit(entry: Outfit)
 
     /**
-     * 获取所有穿搭记录，按日期倒序排列（最新记录在最上）
-     * 返回类型为 Flow，可用于 UI 实时观察数据变化
+     * Get all outfit records, sorted by date in descending order (latest records at the top)
+     * Returns a Flow, which can be used to observe data changes in real-time for UI updates
      */
     @Query("SELECT * FROM outfit_entries ORDER BY date DESC")
     fun getAllOutfits(): Flow<List<Outfit>>
 
     /**
-     * 获取每种穿搭风格的出现次数
-     * 用于生成图表（柱状图或饼图）
-     * 返回数据类 StyleCount(style, count)
+     * Get the count of each outfit style
+     * Used to generate charts (bar or pie)
+     * Returns data class StyleCount(style, count)
      */
     @Query("SELECT style, COUNT(*) AS count FROM outfit_entries GROUP BY style")
     fun getStyleDistribution(): Flow<List<StyleCount>>
 
     /**
-     * 获取穿搭记录总数
-     * 用于显示统计信息或“总记录数”汇总
+     * Get the total count of outfit records
+     * Used to display statistical information or "total record count" summary
      */
     @Query("SELECT COUNT(*) FROM outfit_entries")
     fun getTotalOutfitCount(): Flow<Int>
 
     /**
-     * 获取出现次数最多的穿搭风格
-     * 若无数据，则返回 null
+     * Get the most frequent outfit style
+     * Returns null if no data is available
      */
     @Query("""
         SELECT style FROM outfit_entries 
@@ -54,8 +54,8 @@ interface OutfitDAO {
     fun getMostFrequentStyle(): Flow<String?>
 
     /**
-     * 获取指定日期范围内的风格分布统计
-     * 用于构建“时间筛选”图表（如本周、本月）
+     * Get the style distribution within a specified date range
+     * Used to build "time filter" charts (e.g., this week, this month)
      */
     @Query("""
         SELECT style, COUNT(*) AS count 
