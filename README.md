@@ -32,7 +32,7 @@ A mobile Android app built with Jetpack Compose to help users make better daily 
 
 ---
 
-## Screen
+## Screens
 
 - Login/Register (Email & Google Sign-In)
 - Weather Display + Outfit Suggestion
@@ -49,3 +49,36 @@ A mobile Android app built with Jetpack Compose to help users make better daily 
    ```bash
    git clone https://github.com/AllenSuncc/WeatherOutfitAssistant.git
    cd WeatherOutfitAssistant
+2.	Open in Android Studio
+3.	Set Up Firebase
+	•	Add your google-services.json in the app/ directory.
+	•	Enable Firebase Auth (email/password + Google Sign-In)
+	•	Enable Cloud Firestore
+4.	Get Your Weather API Key
+	•	Sign up at https://openweathermap.org/api
+	•	Add your API key in the Retrofit config
+5.	Run on Emulator or Device
+
+
+---
+
+## Contributors
+
+- Jia-Ying Lin (33534659)
+- WeiHsiang Liu (33553602)
+- Zhehao Li (34266143)
+- Haojun Sun (34215409)
+
+
+---
+
+
+##  References
+
+	•	OpenWeatherMap API
+	•	Firebase Authentication
+	•	Firebase Firestore
+	•	WorkManager
+	•	Jetpack Compose
+
+
