@@ -1,4 +1,4 @@
-package com.example.weatheroutfitassistant.navigation
+package com.example.myapplication.navigation
 
 import android.app.Activity
 import androidx.compose.foundation.layout.padding
@@ -32,11 +32,13 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.myapplication.screen.History
 import com.example.myapplication.viewmodel.UserViewModel
-import com.example.weatheroutfitassistant.screen.Login
-import com.example.weatheroutfitassistant.screen.Register
-import com.example.weatheroutfitassistant.screen.Home
-import com.example.weatheroutfitassistant.screen.Record
-import com.example.weatheroutfitassistant.screen.Report
+import com.example.myapplication.screen.Login
+import com.example.myapplication.screen.Register
+import com.example.myapplication.screen.Report
+import com.example.myapplicaiton.screen.Home
+import com.example.myapplication.screen.Record
+
+
 
 data class NavRoute(val route: String, val icon: ImageVector, val label: String)
 

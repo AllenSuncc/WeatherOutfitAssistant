@@ -1,4 +1,4 @@
-package com.example.weatheroutfitassistant.screen
+package com.example.myapplication.screen
 
 import android.app.DatePickerDialog
 import android.widget.Toast

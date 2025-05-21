@@ -1,4 +1,4 @@
-package com.example.weatheroutfitassistant.screen
+package com.example.myapplicaiton.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
