@@ -34,6 +34,9 @@ import com.example.myapplication.screen.History
 import com.example.myapplication.viewmodel.UserViewModel
 import com.example.weatheroutfitassistant.screen.Login
 import com.example.weatheroutfitassistant.screen.Register
+import com.example.weatheroutfitassistant.screen.Home
+import com.example.weatheroutfitassistant.screen.Record
+import com.example.weatheroutfitassistant.screen.Report
 
 data class NavRoute(val route: String, val icon: ImageVector, val label: String)
 
