@@ -1,4 +1,4 @@
-package com.example.weatheroutfitassistant.screen
+package com.example.myapplication.screen
 
 import android.app.Activity
 import android.content.Intent
