@@ -35,8 +35,8 @@ import com.example.myapplication.viewmodel.UserViewModel
 import com.example.myapplication.screen.Login
 import com.example.myapplication.screen.Register
 import com.example.myapplication.screen.Report
-import com.example.myapplicaiton.screen.Home
 import com.example.myapplication.screen.Record
+import com.example.myapplication.screen.Home
 
 
 

@@ -15,8 +15,6 @@ import com.example.myapplication.ui.theme.MyApplicationTheme
 import com.example.myapplication.navigation.BottomNavigationBar
 import com.example.myapplication.util.worker.WeatherReminderWorker
 import com.example.myapplication.util.worker.scheduleDailyReminder
-import com.example.weatheroutfitassistant.ui.theme.MyApplicationTheme
-
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

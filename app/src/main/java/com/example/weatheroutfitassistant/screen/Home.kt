@@ -1,9 +1,24 @@
-package com.example.myapplicaiton.screen
+package com.example.myapplication.screen
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -12,20 +27,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.myapplication.viewmodel.WeatherViewModel
-import com.example.myapplication.util.weather.getWeatherIcon
 import com.example.myapplication.util.weather.getClothingSuggestion
+import com.example.myapplication.util.weather.getWeatherIcon
+import com.example.myapplication.viewmodel.WeatherViewModel
 
 @Composable
 fun Home(viewModel: WeatherViewModel = viewModel()) {
     val weather by viewModel.weather.collectAsState()
 
-    // Automatically trigger weather request when page first loads
+    // Automatically trigger weather request when the screen loads for the first time
     LaunchedEffect(Unit) {
         viewModel.fetchMelbourneWeather()
     }
 
-    // Use Box to wrap and center the entire content
+    // Use Box to center the entire content
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -123,10 +138,39 @@ fun Home(viewModel: WeatherViewModel = viewModel()) {
                     }
                 }
 
-                
+                // Detailed weather information card
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFEFEFEF)),
+                    elevation = CardDefaults.cardElevation(2.dp)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        Text(
+                            text = "📊 Weather Details",
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.height(6.dp))
+
+                        Text(text = "🌡️ Feels like: ${feelsLike}°C", fontSize = 16.sp)
+                        Text(text = "💧 Humidity: ${humidity}%", fontSize = 16.sp)
+                        Text(text = "🔽 Pressure: ${pressure} hPa", fontSize = 16.sp)
+                        Text(text = "💨 Wind Speed: ${windSpeed} m/s", fontSize = 16.sp)
+                        Text(text = "🧭 Wind Direction: ${windDeg}°", fontSize = 16.sp)
+                        Text(text = "👀 Visibility: ${visibility} m", fontSize = 16.sp)
+                    }
+                }
             }
         } else {
-            // Display loading spinner
+            // Show spinner while loading
             CircularProgressIndicator()
         }
     }

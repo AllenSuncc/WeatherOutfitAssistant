@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "486986741214",
+    "project_id": "weatheroutfitapp-e7d53",
+    "storage_bucket": "weatheroutfitapp-e7d53.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486986741214:android:d0d693d6e9549d8772194f",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486986741214-2g04rre6bbnn73j0hhusu6uh3benj2gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "bffdb6fe917bfa7628eb557019e45823d9ff0351"
+          }
+        },
+        {
+          "client_id": "486986741214-ctnjauqulhpbk50dclc33ofsq03lin77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzG76tRFwh1VUHU9VtvsK4xvXGJrl0U6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486986741214-ctnjauqulhpbk50dclc33ofsq03lin77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
