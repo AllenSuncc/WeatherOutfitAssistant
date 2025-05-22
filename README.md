@@ -50,14 +50,11 @@ A mobile Android app built with Jetpack Compose to help users make better daily 
    git clone https://github.com/AllenSuncc/WeatherOutfitAssistant.git
    cd WeatherOutfitAssistant
 2.	Open in Android Studio
-3.	Set Up Firebase
-	•	Add your google-services.json in the app/ directory.
-	•	Enable Firebase Auth (email/password + Google Sign-In)
-	•	Enable Cloud Firestore
-4.	Get Your Weather API Key
-	•	Sign up at https://openweathermap.org/api
-	•	Add your API key in the Retrofit config
-5.	Run on Emulator or Device
+3.	Run on Emulator or Device
+4.	Note: Since each computer generates a different SHA-1 fingerprint, you must manually add your own SHA-1 to the Firebase console during development to enable Google Sign-In.
+Therefore, if you want to test the Google Sign-In feature, we recommend installing the WeatherOutfitAssistant.apk file directly on the emulator by dragging and dropping it.
+This APK is a signed release version and has Google Sign-In fully enabled out of the box.
+   
 
 
 ---
