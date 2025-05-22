@@ -51,7 +51,7 @@ A mobile Android app built with Jetpack Compose to help users make better daily 
    cd WeatherOutfitAssistant
 2.	Open in Android Studio
 3.	Run on Emulator or Device
-4.	Note: Since each computer generates a different SHA-1 fingerprint, you must manually add your own SHA-1 to the Firebase console during development to enable Google Sign-In.
+4.	Note: Since each computer generates a different SHA-1 fingerprint, you must manually add your own SHA-1 to the Firebase console during development phase to enable Google Sign-In.
 Therefore, if you want to test the Google Sign-In feature, we recommend installing the WeatherOutfitAssistant.apk file directly on the emulator by dragging and dropping it.
 This APK is a signed release version and has Google Sign-In fully enabled out of the box.
    
